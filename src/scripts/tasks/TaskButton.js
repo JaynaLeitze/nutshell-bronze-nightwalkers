@@ -17,3 +17,10 @@ eventHub.addEventListener("click", event => {
         eventHub.dispatchEvent(newTaskClicked)
     }
 })
+
+//{ <button onclick="NewTaskClicked()"></button>;
+// Completed: <input type="checkbox" id="checked">
+//         function myFunction() {
+//             const checkBox = document.getElementById("checked");
+//             checkBox.checked = true;
+//           } }

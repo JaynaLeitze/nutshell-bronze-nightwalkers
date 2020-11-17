@@ -1,27 +1,32 @@
+import { getTasks, useTasks } from "./TaskProvider.js"
+import { taskAsHTML } from './Task.js'
 
-// const contentTarget = document.querySelector(".taskContainer")
-// eventHub.addEventListener("NewTask", () => {
+const taskContainer = document.querySelector(".taskList")
+const eventHub = document.querySelector(".container")
+
+// eventHub.addEventListener("NewTaskClicked", () => {
 
 //     TaskList()
 //   })
 
-// const TaskList = () => {
-//     getTasks().then(() => {
+export const TaskList = () => {
+    getTasks().then(() => {
 
-//        const taskCollection = useTasks()
-//        render(taskCollection
-//     })
-// }
-//     const render = (taskCollection) => {
-//        let taskHTMLRepresentation = ""
-//         for (const task of taskCollection) {
+       const taskCollection = useTasks()
+       render(taskCollection)
+    })
+}
 
-//             taskHTMLRepresentation += taskAsHTML(task)
+    const render = (taskCollection) => {
+       let taskHTMLRepresentation = ""
+        for (const task of taskCollection) {
 
-//             taskContainer.innerHTML = `
-//         <section class="witnessList">
-//             ${witnessHTMLRepresentation}
-//         </section>
-//         `
-//         }
-// }
+            taskHTMLRepresentation += taskAsHTML(task)
+
+            taskContainer.innerHTML = `
+        <section class="taskList">
+            ${taskHTMLRepresentation}
+        </section>
+        `
+        }
+}

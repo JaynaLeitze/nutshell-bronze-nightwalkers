@@ -4,6 +4,7 @@ import { Nutshell } from "./Nutshell.js";
 import { taskButton } from "./tasks/TaskButton.js";
 import { taskForm } from "./tasks/TaskForm.js";
 import { getTasks } from "./tasks/TaskProvider.js";
+import { TaskList } from "./tasks/TaskList.js";
 
 /*
     1. Check if the user is authenticated by looking in session storage for `activeUser`
@@ -18,3 +19,4 @@ Nutshell();
 getTasks();
 taskButton();
 taskForm();
+TaskList();
