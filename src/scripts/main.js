@@ -1,6 +1,9 @@
 import { LoginForm } from "./auth/LoginForm.js";
 import { RegisterForm } from "./auth/RegisterForm.js";
 import { Nutshell } from "./Nutshell.js";
+import { taskButton } from "./tasks/TaskButton.js";
+import { taskForm } from "./tasks/TaskForm.js";
+import { getTasks } from "./tasks/TaskProvider.js";
 
 /*
     1. Check if the user is authenticated by looking in session storage for `activeUser`
@@ -12,3 +15,6 @@ import { Nutshell } from "./Nutshell.js";
 LoginForm();
 RegisterForm();
 Nutshell();
+getTasks();
+taskButton();
+taskForm();
