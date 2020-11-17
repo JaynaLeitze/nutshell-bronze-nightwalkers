@@ -3,6 +3,8 @@ import { RegisterForm } from "./auth/RegisterForm.js";
 import { newEventButton } from "./Events/EventButton.js";
 import { Nutshell } from "./Nutshell.js";
 import { EventForm } from "./Events/EventsForm.js";
+import { EventList } from "./Events/EventsList.js";
+import { getEvents } from "./Events/EventsProvider.js";
 
 /*
     1. Check if the user is authenticated by looking in session storage for `activeUser`
@@ -16,3 +18,4 @@ RegisterForm();
 Nutshell();
 newEventButton();
 EventForm();
+getEvents().then(EventList);
