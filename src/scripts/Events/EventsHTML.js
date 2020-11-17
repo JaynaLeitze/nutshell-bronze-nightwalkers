@@ -5,6 +5,7 @@ export const EventHTML = (eventObj) => {
     <p class="event__name"> What: ${eventObj.eventName}<br>
     <p class="event__date"> When: ${eventObj.eventDate}<br>
     <p class="event__location"> Where: ${eventObj.eventLocation}</p>
+    <button id="deleteEvent--${eventObj.id}">Delete</button>
     <hr>
     </div>
     `;
