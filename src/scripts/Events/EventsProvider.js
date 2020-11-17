@@ -4,6 +4,12 @@ export const useEvents = () => {
   return events.slice();
 };
 
+const dispatchStateChangeEvent = () => {
+  const eventStateChangedEvent = new CustomEvent("eventStateChanged");
+
+  eventHub.dispatchEvent(eventStateChangedEvent);
+};
+
 export const getEvents = () => {
   return (
     fetch(`http://localhost:8088/events`)
@@ -13,4 +19,22 @@ export const getEvents = () => {
         events = parsedEvents;
       })
   );
+};
+
+export const saveEvent = (event) => {
+  return fetch("http://localhost:8088/events", {
+    method: "POST",
+    headers: {
+      "Content-Type": "application/json",
+    },
+    body: JSON.stringify(event),
+  })
+    .then(getEvents)
+    .then(dispatchStateChangeEvent);
+};
+
+export const deleteEvent = (eventId) => {
+  return fetch(`http://localhost:8088/events/${eventId}`, {
+    method: "DELETE",
+  }).then(getEvents);
 };
