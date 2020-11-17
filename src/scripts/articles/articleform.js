@@ -1,8 +1,7 @@
 import {getArticles,useArticles} from"./articleprovider.js"
-import {articleCard} from"./article.js"
-const contentTarget =  documen.querySelector(".articles")
-const eventHub = document.querySelector(".container")
 
+const contentTarget =  document.querySelector(".articleContainer")
+const eventHub = document.querySelector(".container")
 
 // get the articlesdata from getarticles,useArticles
 export const articleForm = () =>{

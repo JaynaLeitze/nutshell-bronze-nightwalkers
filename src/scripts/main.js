@@ -2,6 +2,8 @@ import { LoginForm } from "./auth/LoginForm.js"
 import { RegisterForm } from "./auth/RegisterForm.js"
 import { Nutshell } from "./Nutshell.js"
 import {useArticles,getArticles} from "./articles/articleprovider.js"
+import {articleList} from "./articles/articleList.js"
+import {articleForm} from"./articles/articleform.js"
 
 
 
@@ -19,3 +21,5 @@ getArticles()
 LoginForm();
 RegisterForm();
 Nutshell();
+articleList();
+articleForm()

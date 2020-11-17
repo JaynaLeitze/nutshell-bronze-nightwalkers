@@ -8,5 +8,5 @@ export const articleCard = (articleObj) =>{
     <p> Synopsis: ${articleObj.synopsis}</p>
     <p> Date: ${articleObj.date} </p>
     <p> timestamp: ${new Date(articleObj.timestamp).toLocaleDateString('en-US')}</p>
-    `
+   </section> `
 }
