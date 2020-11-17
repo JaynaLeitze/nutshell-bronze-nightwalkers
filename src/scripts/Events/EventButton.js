@@ -1,4 +1,4 @@
-const eventHub = document.querySelector(".container");
+const eventHub = document.querySelector(".dashboard");
 const contentTarget = document.querySelector(".eventContainer");
 
 export const newEventButton = () => {

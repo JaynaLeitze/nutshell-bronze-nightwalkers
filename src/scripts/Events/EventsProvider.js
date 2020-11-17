@@ -1,3 +1,5 @@
+const eventHub = document.querySelector(".dashboard");
+
 let events = [];
 
 export const useEvents = () => {
