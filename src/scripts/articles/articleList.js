@@ -1,7 +1,8 @@
 import {useArticles,getArticles} from "./articleprovider.js"
 import {articleCard} from"./article.js"
 
-const eventHub = document.querySelector(".container")
+const eventHub = document.querySelector(".dashboard")
+const contentTarget = document.querySelector(".articleContainer")
 // getting data from api
 
 export const articleList = () =>{
@@ -16,6 +17,9 @@ export const articleList = () =>{
 
 eventHub.addEventListener("articlechanged",() =>articleList())
 
+
+
+
 // rendering & putting into Dom
 
 const render = (articleArray) =>{
@@ -23,6 +27,7 @@ const render = (articleArray) =>{
     for(const news of articleArray){
         articleHTML += articleCard(news)
     }
-    articlecontainer.innerHTML = `
+    contentTarget.innerHTML = `
       ${articleHTML}`
     }
+
