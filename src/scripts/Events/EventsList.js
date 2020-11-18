@@ -1,4 +1,9 @@
-import { deleteEvent, getEvents, useEvents } from "./EventsProvider.js";
+import {
+  deleteEvent,
+  getEvents,
+  useEventEntries,
+  useEvents,
+} from "./EventsProvider.js";
 import { EventHTML } from "./EventsHTML.js";
 
 const eventHub = document.querySelector(".dashboard");
@@ -6,7 +11,7 @@ const eventsContainer = document.querySelector(".eventListContainer");
 
 export const EventList = () => {
   getEvents();
-  const events = useEvents();
+  const events = useEventEntries();
   const arrayOfEvents = events.map((event) => {
     const eventHTMLRep = EventHTML(event);
     return eventHTMLRep;
