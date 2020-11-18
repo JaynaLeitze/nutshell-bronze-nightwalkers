@@ -33,6 +33,8 @@ eventHub.addEventListener("click", clickEvent => {
         const synopsis = document.querySelector("#articleSynopsis").value
         const url = document.querySelector("#articleUrl").value
         const timestamp = Date.now()
+        const userId = parseInt(sessionStorage.getItem("activeUser"))
+        
 
         // make a object
 
@@ -40,7 +42,8 @@ eventHub.addEventListener("click", clickEvent => {
             title,
             synopsis,
             url,
-            timestamp
+            timestamp,
+            userId
         }
 
         // send object to database
