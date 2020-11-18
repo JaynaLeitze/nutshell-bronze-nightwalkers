@@ -16,12 +16,12 @@ eventhub.addEventListener("click", (eventObject) => {
     if (eventObject.target.id === "chat-create-button") {
         const chatText = document.querySelector("#chat-create-input").value
     
-       if (chatText !== "") {
-           fetch(`http://localhost:8088/messages`)
-            .then(response => response.json())
-            .then(users => {
-                if (users.length === 0) {
-                    fetch("http://localhost:8088/messages", {
+      // if (chatText !== "") {
+        // return  fetch(`http://localhost:8088/messages`)
+          //  .then(response => response.json())
+            //.then(users => {
+             //   if (users.length === 0) {
+                  return  fetch("http://localhost:8088/messages", {
                         "method": "POST",
                         "headers": {
                             "Content-Type": "application/json"
@@ -31,13 +31,9 @@ eventhub.addEventListener("click", (eventObject) => {
                         
                         })
                     }) 
-                    .then(response => response.json())
-                        .then((newMessage) => {
-                            sessionStorage.setItem("activeMessage", newMessage.id)
-
-                            eventHub.dispatchEvent(new CustomEvent("messageSent"))
-                        })
-                 }
-            })
-    }   }
+                    
+       //          }
+          //  })
+    } 
+//  }
 })     
