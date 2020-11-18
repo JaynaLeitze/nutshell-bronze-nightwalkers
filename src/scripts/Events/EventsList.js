@@ -18,7 +18,7 @@ export const EventList = () => {
 eventHub.addEventListener("eventStateChanged", () => EventList());
 
 eventHub.addEventListener("click", (clickEvent) => {
-  if (clickEvent.target.id.startsWith("deleteNote--")) {
+  if (clickEvent.target.id.startsWith("deleteEvent--")) {
     const [prefix, id] = clickEvent.target.id.split("--");
     console.log("button was clicked");
 
