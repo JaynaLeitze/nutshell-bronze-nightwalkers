@@ -48,7 +48,7 @@ export const deleteArticle = articleId => {
 export const useArticlentries = () =>{
     const sortedByDate = article.sort(
         (currentEntry,nextEntry) =>
-        Date.parse(nextEntry.timestamp) - Date.parse(currentEntry.timestamp)
+        nextEntry.timestamp-currentEntry.timestamp
         ) 
     return sortedByDate;
 }
