@@ -10,8 +10,10 @@ const dispatchStateChangeEvent = () => {
 let tasks = []
 //*gets the information stores within an array from json*
 export const getTasks = () => {
-    return fetch('http://localhost:8088/tasks',{
-        method : "GET"
+
+    return fetch('http://localhost:8088/tasks', {
+        method: "GET"
+
     })
         //*create a promise to give this fetched data when called later*
         .then(response => response.json())
@@ -34,14 +36,17 @@ export const saveTask = task => {
         },
         body: JSON.stringify(task)
     })
-    .then(getTasks)
-    .then(dispatchStateChangeEvent)
+        .then(getTasks)
+        //*This tells the DOM to update without refreshing*
+        .then(dispatchStateChangeEvent)
 }
 
 //*this will delete the information from json server*
-export const deleteTask = taskId => {
-    return fetch(`http://localhost:8088/tasks/${taskId}`, {
+export const deleteTask = task => {
+    return fetch(`http://localhost:8088/tasks/${task}`, {
         method: "DELETE"
     })
-        .then(getTasks)
+        //.then(getTasks)
+        //*This tells the DOM to update without refreshing*
+        .then(dispatchStateChangeEvent)
 }

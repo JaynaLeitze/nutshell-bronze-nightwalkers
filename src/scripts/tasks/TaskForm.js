@@ -8,6 +8,7 @@ const eventHub = document.querySelector(".container")
         eventHub.addEventListener("NewTaskClicked",() => {
             if ("NewTaskClicked") {
                 return contentTarget.innerHTML = `
+
                 <input type="text" id="taskName" placeholder="What is the task?"></input>
                 <input type="date" id="completionDate"></input>
                 <button id="saveTask">Save</button>
@@ -36,4 +37,5 @@ eventHub.addEventListener("click", clickEvent => {
 
 export const taskForm = () => {
     return render()    
+
 }
