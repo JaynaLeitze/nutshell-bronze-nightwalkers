@@ -1,6 +1,7 @@
 import { LoginForm } from "./auth/LoginForm.js";
 import { RegisterForm } from "./auth/RegisterForm.js";
 import { generateChatForm } from "./chat/chatForm.js";
+import { chatList } from "./chat/chatList.js";
 import { Nutshell } from "./Nutshell.js";
 
 /*
@@ -14,4 +15,4 @@ LoginForm();
 RegisterForm();
 Nutshell();
 generateChatForm();
-
+chatList();
