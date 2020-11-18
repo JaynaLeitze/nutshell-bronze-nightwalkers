@@ -35,6 +35,7 @@ export const saveTask = task => {
         body: JSON.stringify(task)
     })
         .then(getTasks)
+        //*This tells the DOM to update without refreshing*
         .then(dispatchStateChangeEvent)
 }
 
@@ -43,6 +44,7 @@ export const deleteTask = task => {
     return fetch(`http://localhost:8088/tasks/${task}`, {
         method: "DELETE"
     })
-        .then(getTasks)
+        //.then(getTasks)
+        //*This tells the DOM to update without refreshing*
         .then(dispatchStateChangeEvent)
 }
