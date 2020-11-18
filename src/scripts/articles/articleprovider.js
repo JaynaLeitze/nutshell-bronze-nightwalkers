@@ -47,7 +47,7 @@ export const deleteArticle = articleId => {
 
 export const useArticlentries = () =>{
     const sortedByDate = article.sort(
-        (nextEntry,currentEntry) =>
+        (currentEntry,nextEntry) =>
         Date.parse(nextEntry.timestamp) - Date.parse(currentEntry.timestamp)
         ) 
     return sortedByDate;
@@ -77,4 +77,3 @@ export const useArticlentries = () =>{
 
 
 
-// <button id="deleteNote--${noteObj.id}">Delete</button>
