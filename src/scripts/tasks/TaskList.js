@@ -32,7 +32,7 @@ const render = (taskCollection) => {
         </section>
         `
         }
-}
+
 
 eventHub.addEventListener("click", clickEvent => {
     console.log(clickEvent, "id")
