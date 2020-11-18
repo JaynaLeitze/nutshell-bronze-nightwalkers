@@ -2,7 +2,7 @@
 // html format of what the message should look like
 // should accept one parameter which is messageObject
 
-export const generateMessageHtmlcreate  = (messageObject) => {
+export const generateMessageHtml = (messageObject) => {
     return `
         <div class="single-message">
             ${messageObject.chatText}
