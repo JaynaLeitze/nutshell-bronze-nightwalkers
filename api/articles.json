@@ -1,0 +1,67 @@
+{
+  "articles": [
+    {
+      "title": "Bronze nightwalkers",
+      "synopsis": "My project",
+      "url": "\"www.google.com\"",
+      "timestamp": 1605713750069,
+      "id": 12
+    },
+    {
+      "title": "Deserts of MAine",
+      "synopsis": "my first group project",
+      "url": "\"localhost:8088.com\"",
+      "timestamp": 1605714079965,
+      "id": 13
+    },
+    {
+      "title": "dfbjkhfj",
+      "synopsis": "dbfjdsbjfj",
+      "url": "\"www.google.com\"",
+      "timestamp": 1605718197944,
+      "id": 17
+    },
+    {
+      "title": "Group Project",
+      "synopsis": "bfhgr bfhsehrg bsdhfbghe",
+      "url": "\"www.facebook.com\"",
+      "timestamp": 1605720140804,
+      "id": 18
+    },
+    {
+      "title": "Group Project",
+      "synopsis": "bfhgr bfhsehrg bsdhfbghe",
+      "url": "\"www.facebook.com\"",
+      "timestamp": 1605720141851,
+      "id": 19
+    },
+    {
+      "title": "aaaaaaaaaaaaaaaaa",
+      "synopsis": "bvfgrhuthf newfkjhj",
+      "url": "\"www.facebook.com\"",
+      "timestamp": 1605720523101,
+      "id": 21
+    },
+    {
+      "title": "HAppy hour",
+      "synopsis": "jdsnfjhufhujwsf",
+      "url": "\"www.facebook.com\"",
+      "timestamp": 1605720666691,
+      "id": 22
+    },
+    {
+      "title": "My group project",
+      "synopsis": "hgdfygryfgrfbhj",
+      "url": "\"trying to fix\"",
+      "timestamp": 1605721095316,
+      "id": 23
+    },
+    {
+      "title": "Suganya",
+      "synopsis": "Current entry",
+      "url": "\"next entry\"",
+      "timestamp": 1605721264260,
+      "id": 24
+    }
+  ]
+}
