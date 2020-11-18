@@ -30,15 +30,17 @@ eventHub.addEventListener("click",clickEvent =>{
 
     // grab all the input values
 const title =  document.querySelector("#articleTitle").value
-const Synopsis =document.querySelector("#articleSynopsis").value
-const link =  document.querySelector("#articleUrl").value
+const synopsis =document.querySelector("#articleSynopsis").value
+const url =  document.querySelector("#articleUrl").value
+const timestamp = Date.now()
     
 // make a object
 
 const newArticle = {
      title,
-    Synopsis,
-    link
+     synopsis,
+     url,
+     timestamp
 }
 
 // send object to database

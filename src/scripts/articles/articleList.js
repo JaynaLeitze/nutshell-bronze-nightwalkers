@@ -33,7 +33,7 @@ const render = (articleArray) =>{
 // making clickEvent for deletebutton
 
 eventHub.addEventListener("click",clickEvent =>{
-    if(clickEvent.target.id.startsWith("deleteNote--")){
+    if(clickEvent.target.id.startsWith("deleteArticle--")){
     const[prefix,id] = clickEvent.target.id.split("--")
 
     deleteArticle(id).then(()=>{
