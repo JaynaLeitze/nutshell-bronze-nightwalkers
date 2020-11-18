@@ -40,3 +40,12 @@ export const deleteEvent = (eventId) => {
     method: "DELETE",
   }).then(getEvents);
 };
+
+//sort events in descending order
+export const useEventEntries = () => {
+  const sortedByDate = events.sort(
+    (currentEntry, nextEntry) =>
+      Date.parse(currentEntry.eventDate) - Date.parse(nextEntry.eventDate)
+  );
+  return sortedByDate;
+};
