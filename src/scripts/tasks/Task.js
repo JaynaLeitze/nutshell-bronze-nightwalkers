@@ -1,3 +1,4 @@
+
 const eventHub = document.querySelector(".container")
 
 //*Create a single task HTML representation after saving a task*
@@ -11,6 +12,7 @@ export const taskAsHTML = (taskObject) => {
         <button id="deleteTask--${taskObject.id}">Delete</button>
     </div>
     `
+
 }
 
 eventHub.addEventListener("checkBoxclicked", event => {
@@ -61,7 +63,6 @@ eventHub.addEventListener("checkBoxclicked", event => {
     //   }
     // }
 
-
      // ${function checkBoxSelect() {
         //     const checkBox = document.createElement("checkbox");
         //     checkBox.setAttribute("type", "checkbox");
@@ -69,5 +70,5 @@ eventHub.addEventListener("checkBoxclicked", event => {
         //   }
         // }
 
-
+    // <input type="checkbox" id="checkBox--${taskObject.id}"> Accept
     //         const cb = document.querySelector('#checkBox:checked') !== null

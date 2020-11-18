@@ -1,14 +1,14 @@
+
 import { getTasks, useTasks, deleteTask } from "./TaskProvider.js"
 import { taskAsHTML } from './Task.js'
 
 const taskContainer = document.querySelector(".taskList")
 const eventHub = document.querySelector(".container")
 
-
 eventHub.addEventListener("taskStateChanged", () => {
 
     TaskList()
-})
+  })
 
 export const TaskList = () => {
     getTasks().then(() => {
@@ -26,10 +26,12 @@ const render = (taskCollection) => {
     }
         //*this needs to be outside the bracket or the for loop won't complete*
         taskContainer.innerHTML = `
+
         <section class="taskList">
             ${taskHTMLRepresentation}
         </section>
         `
+        }
 }
 
 eventHub.addEventListener("click", clickEvent => {
@@ -47,3 +49,4 @@ eventHub.addEventListener("click", clickEvent => {
 
     }
 })
+

@@ -10,8 +10,10 @@ const dispatchStateChangeEvent = () => {
 let tasks = []
 //*gets the information stores within an array from json*
 export const getTasks = () => {
+
     return fetch('http://localhost:8088/tasks', {
         method: "GET"
+
     })
         //*create a promise to give this fetched data when called later*
         .then(response => response.json())

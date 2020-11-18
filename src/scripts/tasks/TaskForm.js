@@ -3,19 +3,20 @@ import { useTasks, getTasks, saveTask } from "./TaskProvider.js"
 const contentTarget = document.querySelector(".taskContainer")
 const eventHub = document.querySelector(".container")
 
-//*This creates the form field*
-const render = () => {
-    eventHub.addEventListener("NewTaskClicked", () => {
-        if ("NewTaskClicked") {
-            return contentTarget.innerHTML = `
+    //*This creates the form field*
+    const render = () => {
+        eventHub.addEventListener("NewTaskClicked",() => {
+            if ("NewTaskClicked") {
+                return contentTarget.innerHTML = `
+
                 <input type="text" id="taskName" placeholder="What is the task?"></input>
                 <input type="date" id="completionDate"></input>
                 <button id="saveTask">Save</button>
             `
-        }
-        console.log("RenderHTML", render)
-    })
-}
+            }
+            console.log("RenderHTML", render)
+            })
+    }
 
 
 //*This tells eventhub what to do when the save button is clicked*
@@ -35,5 +36,6 @@ eventHub.addEventListener("click", clickEvent => {
 })
 
 export const taskForm = () => {
-    return render()
+    return render()    
+
 }
