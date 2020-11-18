@@ -33,10 +33,13 @@ eventHub.addEventListener("click", clickEvent => {
         const synopsis = document.querySelector("#articleSynopsis").value
         const url = document.querySelector("#articleUrl").value
         const timestamp = Date.now()
+        // we are getting userid from sessionstorage in the DOM.
+        // again i did ParseInt
         const userId = parseInt(sessionStorage.getItem("activeUser"))
         
 
         // make a object
+    
 
         const newArticle = {
             title,
