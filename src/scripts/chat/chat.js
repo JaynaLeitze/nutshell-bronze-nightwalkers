@@ -6,6 +6,7 @@ export const generateMessageHtmlcreate  = (messageObject) => {
     return `
         <div class="single-message">
             ${messageObject.chatText}
+            <button id="deleteMessage--${messageObject.id}">Delete</button>
         </div>
     `
 }

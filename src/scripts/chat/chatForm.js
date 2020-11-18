@@ -9,6 +9,7 @@ export const generateChatForm = () => {
     contentTarget.innerHTML = `
         <input id="chat-create-input"/>
         <button id="chat-create-button"> Send Message </button>
+        <button id="deleteMessage--${messageObject.id}">Delete</button>
     `
 }
 
