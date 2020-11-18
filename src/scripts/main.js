@@ -5,7 +5,10 @@ import {useArticles,getArticles} from "./articles/articleprovider.js"
 import {articleList} from "./articles/articleList.js"
 import {articleForm} from"./articles/articleform.js"
 import {articleButton} from"./articles/articleButton.js"
-
+import { newEventButton } from "./Events/EventButton.js";
+import { EventForm } from "./Events/EventsForm.js";
+import { EventList } from "./Events/EventsList.js";
+import { getEvents } from "./Events/EventsProvider.js";
 
 /*
     1. Check if the user is authenticated by looking in session storage for `activeUser`
@@ -24,3 +27,6 @@ Nutshell();
 articleList();
 articleForm();
 articleButton()
+newEventButton();
+EventForm();
+getEvents().then(EventList);
