@@ -6,7 +6,6 @@ export const taskAsHTML = (taskObject) => {
         <p>Task: ${taskObject.nameOfTask}</p>
         <p>Complete by: ${taskObject.dateOfCompletion}</p>
         <input type="checkbox" id="checkBox" unchecked> Completed
-
         <button id="deleteTask--${taskObject.id}">Delete</button>
     </div>
     `
