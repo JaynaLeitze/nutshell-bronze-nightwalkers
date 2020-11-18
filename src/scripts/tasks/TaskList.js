@@ -4,10 +4,10 @@ import { taskAsHTML } from './Task.js'
 const taskContainer = document.querySelector(".taskList")
 const eventHub = document.querySelector(".container")
 
-// eventHub.addEventListener("NewTaskClicked", () => {
+eventHub.addEventListener("taskStateChanged", () => {
 
-//     TaskList()
-//   })
+    TaskList()
+  })
 
 export const TaskList = () => {
     getTasks().then(() => {

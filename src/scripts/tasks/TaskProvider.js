@@ -25,6 +25,7 @@ export const useTasks = () => {
     return tasks.slice()
 }
 
+//*this will add the new information filled out in the form to the json server*
 export const saveTask = task => {
     return fetch('http://localhost:8088/tasks', {
         method: "POST",
@@ -37,6 +38,7 @@ export const saveTask = task => {
     .then(dispatchStateChangeEvent)
 }
 
+//*this will delete the information from json server*
 export const deleteTask = taskId => {
     return fetch(`http://localhost:8088/tasks/${taskId}`, {
         method: "DELETE"
