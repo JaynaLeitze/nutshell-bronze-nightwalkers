@@ -43,6 +43,16 @@ export const deleteArticle = articleId => {
         .then(getArticles)
 }
 
+// sorting in descending order
+
+export const useArticlentries = () =>{
+    const sortedByDate = article.sort(
+        (nextEntry,currentEntry) =>
+        Date.parse(nextEntry.timestamp) - Date.parse(currentEntry.timestamp)
+        ) 
+    return sortedByDate;
+}
+
 
 
 

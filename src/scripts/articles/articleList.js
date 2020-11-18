@@ -1,15 +1,16 @@
 import {useArticles,getArticles} from "./articleprovider.js"
 import {articleCard} from"./article.js"
 import {deleteArticle} from"./articleprovider.js"
+import {useArticlentries} from "./articleprovider.js"
 
 const eventHub = document.querySelector(".dashboard")
-const contentTarget = document.querySelector(".articleContainer")
+const contentTarget = document.querySelector(".articlelistcontainer")
 // getting data from api
 
 export const articleList = () =>{
     getArticles()
     .then(() =>{
-        const articles = useArticles()
+        const articles = useArticlentries()
         render(articles)
     })
 }
