@@ -1,40 +1,57 @@
 {
-    "articles":[
+  "articles": [
     {
-    "id": 1,
-    "userId": 2,
-    "url": "https://www.quantamagazine.org/newfound-wormhole-allows-information-to-escape-black-holes-20171023/",
-    "title": "Wormholes Allow Information to Escape Coding",
-    "synopsis": "Check out this recent discovery about Coding"
-},
-{
-    "id": 2,
-    "userId": 3,
-    "url": "https://www.quantamagazine.org/newfound-wormhole-allows-information-to-escape-black-holes-20171023/",
-    "title": "Wormholes Allow Information to Escape Black Holes",
-    "synopsis": "Check out this recent discovery about Javascript"
-},
-{
-    "id": 3,
-    "userId": 4,
-    "url": "https://www.quantamagazine.org/newfound-wormhole-allows-information-to-escape-black-holes-20171023/",
-    "title": "Wormholes Allow Information to Escape Black Holes",
-    "synopsis": "Check out this recent discovery about HTML & CSS"
-},
-{
-    "id": 4,
-    "userId": 5,
-    "url": "https://www.quantamagazine.org/newfound-wormhole-allows-information-to-escape-black-holes-20171023/",
-    "title": "Wormholes Allow Information to Escape Black Holes",
-    "synopsis": "Check out this recent discovery about Space"
-},
-{
-    "id": 5,
-    "userId": 6,
-    "url": "https://www.quantamagazine.org/newfound-wormhole-allows-information-to-escape-black-holes-20171023/",
-    "title": "Wormholes Allow Information to Escape Red Holes",
-    "synopsis": "Check out this recent discovery about Univerese"
+      "id": 1,
+      "userId": 2,
+      "url": "https://www.quantamagazine.org/newfound-wormhole-allows-information-to-escape-black-holes-20171023/",
+      "title": "Wormholes Allow Information to Escape Coding",
+      "synopsis": "Check out this recent discovery about Coding"
+    },
+    {
+      "id": 2,
+      "userId": 3,
+      "url": "https://www.quantamagazine.org/newfound-wormhole-allows-information-to-escape-black-holes-20171023/",
+      "title": "Wormholes Allow Information to Escape Black Holes",
+      "synopsis": "Check out this recent discovery about Javascript"
+    },
+    {
+      "id": 3,
+      "userId": 4,
+      "url": "https://www.quantamagazine.org/newfound-wormhole-allows-information-to-escape-black-holes-20171023/",
+      "title": "Wormholes Allow Information to Escape Black Holes",
+      "synopsis": "Check out this recent discovery about HTML & CSS"
+    },
+    {
+      "id": 4,
+      "userId": 5,
+      "url": "https://www.quantamagazine.org/newfound-wormhole-allows-information-to-escape-black-holes-20171023/",
+      "title": "Wormholes Allow Information to Escape Black Holes",
+      "synopsis": "Check out this recent discovery about Space"
+    },
+    {
+      "id": 5,
+      "userId": 6,
+      "url": "https://www.quantamagazine.org/newfound-wormhole-allows-information-to-escape-black-holes-20171023/",
+      "title": "Wormholes Allow Information to Escape Red Holes",
+      "synopsis": "Check out this recent discovery about Univerese"
+    },
+    {
+      "title": "SUGANYA",
+      "Synopsis": "SUGI",
+      "link": "\"WWW.GOOGLE.COM\"",
+      "id": 6
+    },
+    {
+      "title": "suganya",
+      "Synopsis": "sugideepu",
+      "link": "\"www.gmail.com\"",
+      "id": 7
+    },
+    {
+      "title": "Group project",
+      "Synopsis": "Check out the coding ",
+      "link": "https://nashville-software-school.github.io/web-development-foundations/",
+      "id": 8
+    }
+  ]
 }
-    ]
-}
-

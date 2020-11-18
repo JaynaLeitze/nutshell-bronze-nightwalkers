@@ -21,6 +21,6 @@ getArticles()
 LoginForm();
 RegisterForm();
 Nutshell();
-// articleList();
+articleList();
 articleForm();
 articleButton()

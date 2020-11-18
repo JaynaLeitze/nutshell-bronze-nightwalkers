@@ -15,6 +15,8 @@ export const getArticles = () =>{
 
 // post method for fetching data
 
+const eventHub = document.querySelector(".dashboard")
+
 export const saveArticle = (article) =>{
     return fetch("http://localhost:8088/articles",{
         method: "POST",
@@ -33,6 +35,13 @@ const dispatchStateChangeEvent = () =>{
     eventHub.dispatchEvent(changeEvent)
 }
 
+// delete button
+export const deleteArticle = articleId => {
+    return fetch(`http://localhost:8088/articles/${articleId}`, {
+        method: "DELETE"
+    })
+        .then(getArticles)
+}
 
 
 

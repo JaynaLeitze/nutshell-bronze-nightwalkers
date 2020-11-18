@@ -1,4 +1,4 @@
-import {getArticles,useArticles} from"./articleprovider.js"
+import {saveArticle} from"./articleprovider.js"
 
 const contentTarget =  document.querySelector(".articleContainer")
 const eventHub = document.querySelector(".dashboard")

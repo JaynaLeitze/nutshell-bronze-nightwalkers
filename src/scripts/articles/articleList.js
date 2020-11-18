@@ -1,5 +1,6 @@
 import {useArticles,getArticles} from "./articleprovider.js"
 import {articleCard} from"./article.js"
+import {deleteArticle} from"./articleprovider.js"
 
 const eventHub = document.querySelector(".dashboard")
 const contentTarget = document.querySelector(".articleContainer")
@@ -17,9 +18,6 @@ export const articleList = () =>{
 
 eventHub.addEventListener("articlechanged",() =>articleList())
 
-
-
-
 // rendering & putting into Dom
 
 const render = (articleArray) =>{
@@ -28,6 +26,19 @@ const render = (articleArray) =>{
         articleHTML += articleCard(news)
     }
     contentTarget.innerHTML = `
+     <h2> NEWS ARTICLES </H2>
       ${articleHTML}`
     }
 
+// making clickEvent for deletebutton
+
+eventHub.addEventListener("click",clickEvent =>{
+    if(clickEvent.target.id.startsWith("deleteNote--")){
+    const[prefix,id] = clickEvent.target.id.split("--")
+
+    deleteArticle(id).then(()=>{
+            const updatedarticles = useArticles() 
+            render(updatedarticles)
+        })
+    }
+})
