@@ -4,9 +4,8 @@ const eventHub = document.querySelector(".container")
 //*Create a single task HTML representation after saving a task*
 export const taskAsHTML = (taskObject) => {
     return `
-    <div class="tasks">
-        <h3>New Task</h3>
-        <p>Task: ${taskObject.nameOfTask}</p>
+    <div id="taskId" class="tasks">
+        <h3>Task: ${taskObject.nameOfTask}</h3>
         <p>Complete by: ${taskObject.dateOfCompletion}</p>
         <input type="checkbox" id="checkBox" unchecked> Completed
         <button id="deleteTask--${taskObject.id}">Delete</button>
@@ -15,13 +14,16 @@ export const taskAsHTML = (taskObject) => {
 
 }
 
-eventHub.addEventListener("checkBoxclicked", event => {
-    const checkBox = document.getElementById("checkBox")
-    if (event.checked == true) {
-        text.style.display = "none"
+eventHub.addEventListener("checkBoxClicked", event => {
+    const removeTask = document.getElementById("checkBox")
+    if (event.checked === true) {
+        taskId.style.display = "none"
     } else {
-        text.style.display = "block"
+        taskId.style.display = "block"
     }
+    const taskRemoved = new CustomEvent("removedTask")
+
+        eventHub.dispatchEvent(taskRemoved)
 })
 
 
