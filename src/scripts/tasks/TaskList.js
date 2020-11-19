@@ -11,7 +11,8 @@ eventHub.addEventListener("taskStateChanged", () => {
   })
 
 export const TaskList = () => {
-    getTasks().then(() => {
+    const activeUserId = sessionStorage.getItem("activeUser")
+    getTasks(activeUserId).then(() => {
 
         const taskCollection = useTasks()
         render(taskCollection)

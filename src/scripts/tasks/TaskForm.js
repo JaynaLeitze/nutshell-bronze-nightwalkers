@@ -24,10 +24,13 @@ eventHub.addEventListener("click", clickEvent => {
     if (clickEvent.target.id === "saveTask") {
         const nameOfTask = document.querySelector("#taskName").value
         const dateOfCompletion = document.querySelector("#completionDate").value
+        const activeUserId = +sessionStorage.getItem("activeUser")
+        console.log("show active user", activeUserId)
         //*Make a new object representation of a task(Key:Value pair)*
         const newTask = {
             nameOfTask,
-            dateOfCompletion
+            dateOfCompletion,
+            userId: activeUserId
         }
 
         //*Change API state and application state*
