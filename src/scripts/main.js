@@ -14,6 +14,7 @@ import { TaskList } from "./tasks/TaskList.js";
 import { EventForm } from "./Events/EventsForm.js";
 import { EventList } from "./Events/EventsList.js";
 import { getEvents } from "./Events/EventsProvider.js";
+import "./tasks/Task.js";
 
 /*
     1. Check if the user is authenticated by looking in session storage for `activeUser`

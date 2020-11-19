@@ -14,7 +14,7 @@ const eventHub = document.querySelector(".container")
                 <button id="saveTask">Save</button>
             `
             }
-            console.log("RenderHTML", render)
+            //console.log("RenderHTML", render)
             })
     }
 

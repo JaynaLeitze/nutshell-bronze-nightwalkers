@@ -17,6 +17,7 @@ export const TaskList = () => {
         render(taskCollection)
     })
 }
+
 //*render to the DOM*
 const render = (taskCollection) => {
     let taskHTMLRepresentation = ""
@@ -34,7 +35,7 @@ const render = (taskCollection) => {
         }
 
 eventHub.addEventListener("click", clickEvent => {
-    console.log(clickEvent, "id")
+    //console.log(clickEvent, "id")
     if (clickEvent.target.id.startsWith("deleteTask--")) {
         const [prefix, id] = clickEvent.target.id.split("--")
 
@@ -42,7 +43,7 @@ eventHub.addEventListener("click", clickEvent => {
             Invoke the function that performs the delete operation.
 
             Once the operation is complete you should THEN invoke
-            useNotes() and render the note list again.
+            useTasks() and render the note list again.
         */
        deleteTask(id)
 
