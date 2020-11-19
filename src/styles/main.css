@@ -11,7 +11,6 @@
     margin-bottom: 20px; 
     padding: 5px;
 }
-/*.container {
 .articleContainer{
     border: 2px solid blue;
     background-color: lightblue;
@@ -39,6 +38,6 @@
   display: flex;
   border: 1px red dotted;
   flex-direction: column;
-} */
+} 
 
 

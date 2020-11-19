@@ -15,11 +15,15 @@ export const chatList = () => {
 }
 
 const render = (messages) => {
-    const contentTarget = document.querySelector(".chatContainer")
+    const contentTarget = document.querySelector(".chatListContainer")
     let messagesAsHtml = ""
     messages.forEach((currentMessage) => {
         messagesAsHtml += generateMessageHtml(currentMessage)
     })
-    contentTarget.innerHTML += messagesAsHtml
+    contentTarget.innerHTML = messagesAsHtml
 }
 
+const eventHub = document.querySelector(".container")
+eventHub.addEventListener("messageDataChange", () => {
+    chatList()
+})

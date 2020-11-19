@@ -9,7 +9,6 @@ export const generateChatForm = () => {
     contentTarget.innerHTML = `
         <input id="chat-create-input"/>
         <button id="chat-create-button"> Send Message </button>
-        <button id="deleteMessage--${messageObject.id}">Delete</button>
     `
 }
 
@@ -27,6 +26,9 @@ eventhub.addEventListener("click", (eventObject) => {
                     "chatText": chatText,
                     "timeStamp": Date.now()
                 })
+            })  .then(() => {
+                const messageDataChange = new CustomEvent("messageDataChange")
+            eventhub.dispatchEvent(messageDataChange)
             })
         }           
     } 
