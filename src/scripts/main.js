@@ -35,4 +35,4 @@ articleForm();
 articleButton();
 newEventButton();
 EventForm();
-getEvents().then(EventList);
+EventList();
