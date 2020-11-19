@@ -1,3 +1,16 @@
+.single-message {
+    border: 1px dotted gray;
+    padding: 5px;
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+
+.chatContainer {
+    border: 1px solid turquoise;
+    margin-top: 20px;
+    margin-bottom: 20px; 
+    padding: 5px;
+}
 .articleContainer{
     border: 2px solid blue;
     background-color: lightblue;
@@ -25,4 +38,6 @@
   display: flex;
   border: 1px red dotted;
   flex-direction: column;
-}
+} 
+
+
