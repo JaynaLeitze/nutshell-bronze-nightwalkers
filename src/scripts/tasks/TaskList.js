@@ -32,10 +32,7 @@ const render = (taskCollection) => {
         </section>
         `
         }
-<<<<<<< HEAD
 
-=======
->>>>>>> master
 
 eventHub.addEventListener("click", clickEvent => {
    // console.log(clickEvent, "id")
