@@ -3,9 +3,9 @@ let article = []
 export const useArticles = () =>{
    return article.slice()
 }
-export const getArticles = () =>{
+export const getArticles = (userId) =>{
     // debugger
-    return fetch("http://localhost:8088/articles")
+    return fetch(`http://localhost:8088/articles?userId=${userId}`)
     .then(response => response.json())
     .then(parsedArticles =>{
        article=parsedArticles
