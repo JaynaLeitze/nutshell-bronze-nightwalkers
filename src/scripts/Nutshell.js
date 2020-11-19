@@ -9,7 +9,9 @@ import { articleButton } from "./articles/articleButton.js";
 import { newEventButton } from "./Events/EventButton.js";
 import { EventForm } from "./Events/EventsForm.js";
 import { EventList } from "./Events/EventsList.js";
-import { getEvents } from "./Events/EventsProvider.js";
+// import { getEvents } from "./Events/EventsProvider.js";
+import { generateChatForm } from "./chat/chatForm.js";
+import { chatList } from "./chat/chatList.js";
 
 export const Nutshell = () => {
   // Render all your UI components here
@@ -24,6 +26,8 @@ export const Nutshell = () => {
   EventForm();
   EventList();
   getArticles().then(useArticles);
+  generateChatForm();
+  chatList();
 };
 
 const eventHub = document.querySelector(".container");
