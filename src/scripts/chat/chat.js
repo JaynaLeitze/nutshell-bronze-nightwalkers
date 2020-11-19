@@ -1,10 +1,7 @@
 //Author: Susan Wiens
 // html format of what the message should look like
 // should accept one parameter which is messageObject
-
-export const generateMessageHtml= (messageObject) => {
 import {getMessages} from "./chatProvider.js"
-
 export const generateMessageHtml = (messageObject) => {
     return `
         <div class="single-message">
