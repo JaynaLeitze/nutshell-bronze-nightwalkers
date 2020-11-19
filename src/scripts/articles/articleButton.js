@@ -4,7 +4,7 @@ const contentTarget=document.querySelector(".NewButton")
 export const articleButton = ()=>{
     contentTarget.innerHTML +=`
     <div class="NewButton">
-    <button id="articlebutton">New Article</button>
+    <button id="articlebutton">Add New Article</button>
     </div>
     `}
 

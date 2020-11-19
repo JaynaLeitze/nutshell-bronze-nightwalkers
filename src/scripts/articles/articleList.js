@@ -8,7 +8,8 @@ const contentTarget = document.querySelector(".articlelistcontainer")
 // getting data from api
 
 export const articleList = () =>{
-    getArticles()
+    const userId = sessionStorage.getItem("activeUser")
+    getArticles(userId)
     .then(() =>{
         const articles = useArticlentries()
         render(articles)
