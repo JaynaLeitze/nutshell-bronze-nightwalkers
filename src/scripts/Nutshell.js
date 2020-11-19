@@ -28,6 +28,7 @@ export const Nutshell = () => {
   generateChatForm();
   chatList();
 };
+// responding to  customevent for registerform.js
 
 const eventHub = document.querySelector(".container");
 
