@@ -32,10 +32,9 @@ const render = (taskCollection) => {
         </section>
         `
         }
-}
 
 eventHub.addEventListener("click", clickEvent => {
-    console.log(clickEvent, "id")
+   // console.log(clickEvent, "id")
     if (clickEvent.target.id.startsWith("deleteTask--")) {
         const [prefix, id] = clickEvent.target.id.split("--")
 
