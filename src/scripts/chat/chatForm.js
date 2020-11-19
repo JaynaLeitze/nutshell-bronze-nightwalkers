@@ -15,6 +15,7 @@ export const generateChatForm = () => {
 eventhub.addEventListener("click", (eventObject) => {
     if (eventObject.target.id === "chat-create-button") {
         const chatText = document.querySelector("#chat-create-input").value
+        const activeUserId = sessionStorage.getItem("activeUser")
     
         if (chatText !== "") {
             return fetch("http://localhost:8088/messages", {
@@ -24,7 +25,8 @@ eventhub.addEventListener("click", (eventObject) => {
                 },
                 body: JSON.stringify({
                     "chatText": chatText,
-                    "timeStamp": Date.now()
+                    "timeStamp": Date.now(),
+                    "userId": +activeUserId
                 })
             })  .then(() => {
                 const messageDataChange = new CustomEvent("messageDataChange")
