@@ -12,9 +12,9 @@ const dispatchStateChangeEvent = () => {
   eventHub.dispatchEvent(eventStateChangedEvent);
 };
 
-export const getEvents = (userId) => {
+export const getEvents = () => {
   return (
-    fetch(`http://localhost:8088/events?userId=${userId}`)
+    fetch(`http://localhost:8088/events`)
       .then((response) => response.json())
       //do something with the data
       .then((parsedEvents) => {

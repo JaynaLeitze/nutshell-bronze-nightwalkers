@@ -5,21 +5,32 @@ import {
   useEvents,
 } from "./EventsProvider.js";
 import { EventHTML } from "./EventsHTML.js";
+import { getFriends, useFriends } from "../Friends/FriendsDataProvider.js";
 
 const eventHub = document.querySelector(".dashboard");
 const eventsContainer = document.querySelector(".eventListContainer");
 
 export const EventList = () => {
-  const activeUserId = sessionStorage.getItem("activeUser");
-  getEvents(activeUserId).then(() => {
-    const events = useEventEntries();
-    const arrayOfEvents = events.map((event) => {
-      const eventHTMLRep = EventHTML(event);
-      return eventHTMLRep;
+  const activeUserId = parseInt(sessionStorage.getItem("activeUser"));
+  getEvents()
+    .then(getFriends)
+    .then(() => {
+      const friendships = useFriends()
+        .filter((friend) => friend.activeUserId === activeUserId)
+        .map((friendship) => friendship.userId);
+      console.log(friendships);
+      const events = useEventEntries().filter(
+        (eventObj) =>
+          eventObj.userId === activeUserId ||
+          friendships.includes(eventObj.userId)
+      );
+      const arrayOfEvents = events.map((event) => {
+        const eventHTMLRep = EventHTML(event);
+        return eventHTMLRep;
+      });
+      const stringOfAll = arrayOfEvents.join("");
+      eventsContainer.innerHTML = stringOfAll;
     });
-    const stringOfAll = arrayOfEvents.join("");
-    eventsContainer.innerHTML = stringOfAll;
-  });
 };
 
 eventHub.addEventListener("eventStateChanged", () => EventList());
