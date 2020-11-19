@@ -38,6 +38,9 @@
   display: flex;
   border: 1px red dotted;
   flex-direction: column;
-} 
-
-
+}
+.taskSection {
+  display: flex;
+  border: 1px orangered dotted;
+  flex-direction: column;
+}

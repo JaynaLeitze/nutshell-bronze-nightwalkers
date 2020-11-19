@@ -9,9 +9,9 @@ const dispatchStateChangeEvent = () => {
 //*create an empty array to hold what is fetched from json*
 let tasks = []
 //*gets the information stores within an array from json*
-export const getTasks = () => {
+export const getTasks = (userId) => {
 
-    return fetch('http://localhost:8088/tasks', {
+    return fetch(`http://localhost:8088/tasks?userId=${userId}`, {
         method: "GET"
 
     })
@@ -46,7 +46,7 @@ export const deleteTask = task => {
     return fetch(`http://localhost:8088/tasks/${task}`, {
         method: "DELETE"
     })
-        //.then(getTasks)
+        .then(getTasks)
         //*This tells the DOM to update without refreshing*
         .then(dispatchStateChangeEvent)
 }

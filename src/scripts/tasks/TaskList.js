@@ -9,11 +9,14 @@ eventHub.addEventListener("taskStateChanged", () => {
 });
 
 export const TaskList = () => {
-  getTasks().then(() => {
-    const taskCollection = useTasks();
-    render(taskCollection);
-  });
-};
+    const activeUserId = sessionStorage.getItem("activeUser")
+    getTasks(activeUserId).then(() => {
+
+        const taskCollection = useTasks()
+        render(taskCollection)
+    })
+}
+
 //*render to the DOM*
 const render = (taskCollection) => {
   let taskHTMLRepresentation = "";
@@ -39,7 +42,7 @@ eventHub.addEventListener("click", (clickEvent) => {
             Invoke the function that performs the delete operation.
 
             Once the operation is complete you should THEN invoke
-            useNotes() and render the note list again.
+            useTasks() and render the note list again.
         */
     deleteTask(id);
   }

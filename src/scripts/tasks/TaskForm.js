@@ -1,4 +1,4 @@
-import { useTasks, getTasks, saveTask } from "./TaskProvider.js"
+import { saveTask } from "./TaskProvider.js"
 
 const contentTarget = document.querySelector(".taskContainer")
 const eventHub = document.querySelector(".container")
@@ -14,7 +14,7 @@ const eventHub = document.querySelector(".container")
                 <button id="saveTask">Save</button>
             `
             }
-            console.log("RenderHTML", render)
+            //console.log("RenderHTML", render)
             })
     }
 
@@ -24,10 +24,13 @@ eventHub.addEventListener("click", clickEvent => {
     if (clickEvent.target.id === "saveTask") {
         const nameOfTask = document.querySelector("#taskName").value
         const dateOfCompletion = document.querySelector("#completionDate").value
+        const activeUserId = sessionStorage.getItem("activeUser")
+        console.log("show active user", activeUserId)
         //*Make a new object representation of a task(Key:Value pair)*
         const newTask = {
             nameOfTask,
-            dateOfCompletion
+            dateOfCompletion,
+            userId: +activeUserId
         }
 
         //*Change API state and application state*
