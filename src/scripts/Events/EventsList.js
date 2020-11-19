@@ -10,14 +10,16 @@ const eventHub = document.querySelector(".dashboard");
 const eventsContainer = document.querySelector(".eventListContainer");
 
 export const EventList = () => {
-  getEvents();
-  const events = useEventEntries();
-  const arrayOfEvents = events.map((event) => {
-    const eventHTMLRep = EventHTML(event);
-    return eventHTMLRep;
+  const activeUserId = sessionStorage.getItem("activeUser");
+  getEvents(activeUserId).then(() => {
+    const events = useEventEntries();
+    const arrayOfEvents = events.map((event) => {
+      const eventHTMLRep = EventHTML(event);
+      return eventHTMLRep;
+    });
+    const stringOfAll = arrayOfEvents.join("");
+    eventsContainer.innerHTML = stringOfAll;
   });
-  const stringOfAll = arrayOfEvents.join("");
-  eventsContainer.innerHTML = stringOfAll;
 };
 
 eventHub.addEventListener("eventStateChanged", () => EventList());

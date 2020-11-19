@@ -11,7 +11,13 @@
     margin-bottom: 20px; 
     padding: 5px;
 }
-/*.container {
+.articleContainer{
+    border: 2px solid blue;
+    background-color: lightblue;
+    padding:5%;
+
+}
+.container {
   border: 1px black solid;
 }
 .dashboard {
@@ -32,4 +38,9 @@
   display: flex;
   border: 1px red dotted;
   flex-direction: column;
-} */
+} 
+.taskSection {
+  display: flex;
+  border: 1px orangered dotted;
+  flex-direction: column;
+}

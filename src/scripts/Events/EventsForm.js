@@ -34,12 +34,15 @@ eventHub.addEventListener("click", (clickEvent) => {
     const eventName = document.querySelector("#event-name").value;
     const eventDate = document.querySelector("#event-date").value;
     const eventLocation = document.querySelector("#event-location").value;
+    const activeUserId = sessionStorage.getItem("activeUser");
+    console.log(activeUserId);
 
     //make new event
     const newEvent = {
       eventName,
       eventDate,
       eventLocation,
+      userId: parseInt(activeUserId),
     };
     console.log(newEvent);
     //Post object to database
