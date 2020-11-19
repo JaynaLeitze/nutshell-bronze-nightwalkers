@@ -13,8 +13,8 @@ import { Nutshell } from "./Nutshell.js";
 
 const activeUserId = sessionStorage.getItem("activeUser");
 if (activeUserId === null) {
-  LoginForm();
-  RegisterForm();
+    LoginForm();
+    RegisterForm();
 } else {
-  Nutshell();
+    Nutshell();
 }
