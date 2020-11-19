@@ -15,12 +15,14 @@ export const EventList = () => {
   getEvents()
     .then(getFriends)
     .then(() => {
-      const friendships = useFriends().filter(
-        (friend) => friend.activeUserId === activeUserId
-      );
+      const friendships = useFriends()
+        .filter((friend) => friend.activeUserId === activeUserId)
+        .map((friendship) => friendship.userId);
       console.log(friendships);
       const events = useEventEntries().filter(
-        (eventObj) => eventObj.userId === activeUserId
+        (eventObj) =>
+          eventObj.userId === activeUserId ||
+          friendships.includes(eventObj.userId)
       );
       const arrayOfEvents = events.map((event) => {
         const eventHTMLRep = EventHTML(event);
